@@ -1,0 +1,76 @@
+typescript (language):
+ 
+react (framework)
+vite (starter pack):
+for vite, type in the terminal: npm create vite@latest,then choose project name(gym-typescript),then choose react,then choose typescript
+framer motions(animations):
+for animations, type in the terminal: npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
+tailwind css(styling)
+tailwind heroicons(icons)
+for dev dependies :
+npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
+
+Links:
+React: https://reactjs.org/
+Typescript: https://www.typescriptlang.org/
+Typescript Types vs Interfaces: https://tinyurl.com/typescripttypesvs...
+Vite: https://tailwindcss.com/docs/guides/vite
+Google Fonts: https://fonts.google.com/
+Tailwind: https://tailwindcss.com/
+Prettier Tailwind Css Plugin:https://github.com/tailwindlabs/prettier-plugin-tailwindcss
+Prettier Tailwind Css Sorting:https://tailwindcss.com/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted
+Hero Icons: https://heroicons.com/
+Framer Motion:https://www.framer.com/motion/introduction/
+Form Submit: https://formsubmit.co/
+React Anchor Link smooth Scroll: https://github.com/mauricevancooten/react-anchor-link-smooth-scroll
+Cloudflare Pages: https://pages.cloudflare.com/
+
+Code
+completed code: https://github.com/ed-roh/gym-typescript
+assets:https://github.com/ed-roh/gym-typescript/tree/master/src/assets
+tailwind config file: https://github.com/ed-roh/gym-typescript/blob/master/tailwind.config.cjs
+useMediaQuery code: https://github.com/ed-roh/gym-typescript/blob/master/src/hooks/useMediaQuery.ts
+———————————
+
+
+vite.config.ts:
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias:[{ find: '@',replacement: path.resolve(__dirname,'src')}]
+  }
+})
+
+ts.config.json:
+
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*":["./src/*"]
+    },
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+just before bundler mode
+
+for tailwind css:
+install these extensions: tailwind Docs, tailwind css intellisense
+install tailwind css with vite in url and follow upto 5th steps skipping the first step
+creat an new file named as prettier.config.js and after that type :
+export const plugins = [require("prettier-plugin-tailwindcss")];
+type in the terminal : npm i _D prettier prettier-plugin-tailwindcss
+install react-hook-form(when dealing with tailwind) by typing:
+npm i react-hook-form
+import { useForm } from "react-hook-form";
+
+
+press ctrl + shift + p to find the window commmand search
